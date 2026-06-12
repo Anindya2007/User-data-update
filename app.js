@@ -30,4 +30,9 @@ app.post('/create', async (req, res) => {
     res.redirect('/read');
 })
 
+app.get('/delete/:name',async (req,res)=>{
+    await userModels.findOneAndDelete({name:req.params.name});
+    res.redirect('/read');
+});
+
 app.listen(3000);
