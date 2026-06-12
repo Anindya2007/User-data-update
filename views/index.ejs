@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div style="margin-bottom: 10px;">
+    <div style="margin-bottom: 20px;">
         <a style="font-size:20px;text-decoration: none;color: aqua;" href="/read">Read Users</a>
     </div>
 
     <h1>Create User :-</h1>
     <hr>
     <div id="form-div">
-    <form>
+    <form action="/create" method="post">
         <input type="text" class="input-box" name="name" placeholder="Name">
         <input type="email" class="input-box" name="email" placeholder="Email">
         <input type="url" class="input-box" name="image" placeholder="Image URL">
-        <input  id="button" type="button" value="Create User">
+        <input  id="button" type="submit" value="Create User">
     </form>
     </div>
 </body>

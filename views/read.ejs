@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div style="margin-bottom: 10px;">
+    <div style="margin-bottom: 20px;">
         <a style="font-size:20px;text-decoration: none;color: aqua;" href="/">Go Back</a>
     </div>
 
@@ -16,25 +16,21 @@
 
     <div id="parent-box">
 
-        <div id="user-box">
-            <div style="height: 180px;width:180px;background-color: aqua;margin-bottom:5px"></div>
-            <h2 style="margin-bottom: 5px;">Ankit Kumar</h2>
-            <h4 style="margin-bottom:10px;">Email@yashoo.in</h4>
-            <div style="margin-top: 8px; display: flex; justify-content: space-evenly">
-                <a href=""  style="text-decoration: none;color:yellow">Edit User</a>
-                <a href=""  style="text-decoration: none;color:red">Delete User</a>
+        <%users.forEach((data)=>{%>
+
+            <div id="user-box">
+                
+                <img style="height: 180px;width:180px;border-radius:10px;margin-bottom:5px" src="<%=data.image%>">
+                <h2 style="margin-bottom: 5px;"><%=data.name%></h2>
+                <h4 style="margin-bottom:10px;"><%=data.email%></h4>
+                
+                <div style="margin-top: 8px; display: flex; justify-content: space-evenly">
+                    <a href=""  style="text-decoration: none;color:yellow">Edit User</a>
+                    <a href=""  style="text-decoration: none;color:red">Delete User</a>
+                </div>
             </div>
-        </div>
-        
-        <div id="user-box">
-            <div style="height: 180px;width:180px;background-color: aqua;margin-bottom:5px"></div>
-            <h2 style="margin-bottom: 5px;">Ankit Kumar</h2>
-            <h4 style="margin-bottom:10px;">Email@yashoo.in</h4>
-            <div style="margin-top: 8px; display: flex; justify-content: space-evenly">
-                <a href=""  style="text-decoration: none;color:yellow">Edit User</a>
-                <a href=""  style="text-decoration: none;color:red">Delete User</a>
-            </div>
-        </div>
+            <%})%>
+
     </div>
 
 </body>
