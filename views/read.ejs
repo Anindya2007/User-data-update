@@ -15,7 +15,7 @@
     <hr>
 
     <div id="parent-box">
-
+        <%if (users.length>0){%>
         <%users.forEach((data)=>{%>
 
             <div id="user-box">
@@ -25,12 +25,13 @@
                 <h4 style="margin-bottom:10px;"><%=data.email%></h4>
                 
                 <div style="margin-top: 8px; display: flex; justify-content: space-evenly">
-                    <a href="edit/<%=data.name%>"  style="text-decoration: none;color:yellow">Edit User</a>
-                    <a href="delete/<%=data.name%>"  style="text-decoration: none;color:red">Delete User</a>
+                    <a href="/edit/<%=data._id%>"  style="text-decoration: none;color:yellow">Edit User</a>
+                    <a href="/delete/<%=data.name%>"  style="text-decoration: none;color:red">Delete User</a>
                 </div>
             </div>
-            <%})%>
-
+            <%})} else{%>
+                <h2 style="font-weight:bold;color:white">No users found...</h2>
+            <%}%>
     </div>
 
 </body>

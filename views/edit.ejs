@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div style="margin-bottom: 20px;">
+        <a style="font-size:20px;text-decoration: none;color: aqua;" href="/read">Read Users</a>
+    </div>
+
+    <h1>Edit User :-</h1>
+    <hr>
+    <div id="form-div">
+    <form action="/update/<%=user._id%>" method="post">
+        <input type="text" class="input-box" name="name" placeholder="Name" value="<%=user.name%>">
+        <input type="email" class="input-box" name="email" placeholder="Email" value="<%=user.email%>">
+        <input type="url" class="input-box" name="image" placeholder="Image URL" value="<%=user.image%>">
+        <input  style="color:black; font-weight:bold; border-radius:10px; padding:10px; display: block; margin:15px 0px 15px 0px; font-size: 20px; background-color: yellow; cursor: pointer;" type="submit" value="Update User">
+    </form>
+    </div>
+</body>
+</html>

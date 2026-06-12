@@ -1,0 +1,4 @@
+- [x] Update `app.js` edit/update routes with robust error handling
+- [x] Use `findByIdAndUpdate` with `runValidators: true`
+- [x] Handle invalid/missing user in edit/update flows
+- [x] Verify behavior by running the app and testing edit flow (port 3000 already in use, app is already running)
